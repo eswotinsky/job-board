@@ -1,0 +1,15 @@
+<h1>Post Your Job Here</h1>
+<ul>
+    @foreach(var jobOpening in Model)
+    {
+    <li>@jobOpening.GetTitle()</li>
+    <li>@jobOpening.GetDescription()</li>
+    <li>@jobOpening.GetContactInfo()</li>
+    }
+</ul>
+<p><a href="/jobs/new">Add another Job.</a></p>
+
+<form action="/jobs/delete" method="post">
+    <button type="submit" name="button">Clear All Items</button>
+
+</form>
